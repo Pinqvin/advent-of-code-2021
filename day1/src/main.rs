@@ -17,7 +17,7 @@ fn get_sliding_window_increases(path: &str) -> io::Result<u32> {
             window.push(value);
 
             if window.len() == 3 {
-                values.push(window[0] + window[1] + window[2]);
+                values.push(window.iter().sum());
                 window.remove(0);
             }
 
